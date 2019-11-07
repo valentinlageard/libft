@@ -28,7 +28,11 @@ SRC			= ft_strlen.c \
 				ft_strnstr.c \
 				ft_memchr.c \
 				ft_memcmp.c \
-				ft_itoa.c
+				ft_itoa.c \
+				ft_putchar_fd.c \
+				ft_putstr_fd.c \
+				ft_putendl_fd.c \
+				ft_putnbr_fd.c
 
 OBJS		= ${SRC:.c=.o}
 

@@ -3,6 +3,12 @@
 
 # include <string.h>
 
+typedef struct	s_list
+{
+	void			*content;
+	struct s_list	*next;
+}				t_list;
+
 size_t	ft_strlen(const char *str);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -32,5 +38,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_itoa(int n);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
