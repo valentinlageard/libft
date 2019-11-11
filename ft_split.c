@@ -6,13 +6,13 @@
 /*   By: vlageard <vlageard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:57:41 by vlageard          #+#    #+#             */
-/*   Updated: 2019/11/05 18:03:54 by vlageard         ###   ########.fr       */
+/*   Updated: 2019/11/11 04:39:53 by vlageard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int		count_words(const char *str, char sep)
+static int		count_words(const char *str, char sep)
 {
 	int i;
 	int word_count;
@@ -36,7 +36,7 @@ int		count_words(const char *str, char sep)
 	return (word_count);
 }
 
-int		new_word_pos(const char *str, int n_word, char sep)
+static int		new_word_pos(const char *str, int n_word, char sep)
 {
 	int i;
 	int word_count;
@@ -64,7 +64,7 @@ int		new_word_pos(const char *str, int n_word, char sep)
 	return (i);
 }
 
-char	*n_word(const char *str, int n_word, char sep)
+static char	*n_word(const char *str, int n_word, char sep)
 {
 	int		i;
 	int		j;

@@ -6,14 +6,14 @@
 /*   By: vlageard <vlageard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 18:08:46 by vlageard          #+#    #+#             */
-/*   Updated: 2019/11/06 18:49:06 by vlageard         ###   ########.fr       */
+/*   Updated: 2019/11/11 04:40:44 by vlageard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-int		is_trim_set(char c, char const *set)
+static int		is_trim_set(char c, char const *set)
 {
 	int i;
 
@@ -27,7 +27,7 @@ int		is_trim_set(char c, char const *set)
 	return (0);
 }
 
-int		count_trim_start(char const *s1, char const *set)
+static int		count_trim_start(char const *s1, char const *set)
 {
 	int i;
 
@@ -41,7 +41,7 @@ int		count_trim_start(char const *s1, char const *set)
 	return (i);
 }
 
-int		count_trim_end(char const *s1, char const *set, int start_trim)
+static int		count_trim_end(char const *s1, char const *set, int start_trim)
 {
 	int i;
 	int trim_end_count;

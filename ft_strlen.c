@@ -6,11 +6,11 @@
 /*   By: vlageard <vlageard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 20:56:44 by vlageard          #+#    #+#             */
-/*   Updated: 2019/11/04 21:03:41 by vlageard         ###   ########.fr       */
+/*   Updated: 2019/11/11 01:23:30 by vlageard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" 
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

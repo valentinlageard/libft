@@ -6,7 +6,7 @@
 /*   By: vlageard <vlageard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:13:22 by vlageard          #+#    #+#             */
-/*   Updated: 2019/11/06 19:47:44 by vlageard         ###   ########.fr       */
+/*   Updated: 2019/11/11 04:34:15 by vlageard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,9 @@ char	*ft_strchr(const char *s, int c)
 		s_ptr++;
 		i++;
 	}
-	if (s[i] == 0 && c == 0)
+	if (!s[i] && c == 0)
+	{
 		return (s_ptr);
-	return (NULL);
+	}
+	return (0);
 }

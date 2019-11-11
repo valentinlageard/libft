@@ -6,13 +6,13 @@
 /*   By: vlageard <vlageard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 01:40:55 by vlageard          #+#    #+#             */
-/*   Updated: 2019/11/07 03:09:10 by vlageard         ###   ########.fr       */
+/*   Updated: 2019/11/11 04:38:41 by vlageard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int		itoa_len(int n)
+static int		itoa_len(int n)
 {
 	int i;
 

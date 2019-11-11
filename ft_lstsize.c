@@ -1,43 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vlageard <vlageard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/06 22:56:52 by vlageard          #+#    #+#             */
-/*   Updated: 2019/11/08 19:56:36 by vlageard         ###   ########.fr       */
+/*   Created: 2019/11/07 18:38:54 by vlageard          #+#    #+#             */
+/*   Updated: 2019/11/07 20:55:50 by vlageard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+int ft_lstsize(t_list *lst)
 {
-	size_t	i;
-	unsigned char *ptr_src;
-	unsigned char *ptr_dest;
+	int		i;
 
 	i = 0;
-	ptr_src = (unsigned char*)src;
-	ptr_dest = (unsigned char*)dest;
-	if (!dest && !src)
-		return (0);
-	if (ptr_dest < ptr_src)
+	while (lst)
 	{
-		while (i < n)
-		{
-			ptr_dest[i] = ptr_src[i];
-			i++;
-		}
+		lst = lst->next;
+		i++;
 	}
-	else
-	{
-		while (i < n)
-		{
-			ptr_dest[n - 1 - i] = ptr_src[n - 1 - i];
-			i++;
-		}
-	}
-	return (ptr_dest);
+	return (i);
 }

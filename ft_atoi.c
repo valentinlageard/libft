@@ -6,11 +6,11 @@
 /*   By: vlageard <vlageard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 22:16:07 by vlageard          #+#    #+#             */
-/*   Updated: 2019/11/04 22:24:37 by vlageard         ###   ########.fr       */
+/*   Updated: 2019/11/11 04:38:24 by vlageard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_space(char c)
+static int	ft_is_space(char c)
 {
 	if (c == 32 || (c >= 9 && c <= 13))
 		return (1);

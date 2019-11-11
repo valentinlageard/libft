@@ -6,44 +6,44 @@
 /*   By: vlageard <vlageard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 21:36:48 by vlageard          #+#    #+#             */
-/*   Updated: 2019/11/06 22:09:10 by vlageard         ###   ########.fr       */
+/*   Updated: 2019/11/11 04:40:24 by vlageard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		little_is_found(const char *big, const char* little, size_t len, size_t i)
+static int		needle_is_found(const char *haystack, const char* needle, size_t len, size_t i)
 {
 	size_t j;
 
 	j = 0;
-	while (big[i+j] && little[j] && i+j < len)
+	while (haystack[i+j] && needle[j] && i+j < len)
 	{
-		if (big[i+j] != little[j])
+		if (haystack[i+j] != needle[j])
 			return (0);
 		j++;
 	}
-	if (little[j] == 0)
+	if (needle[j] == 0)
 		return (1);
 	else
 		return (0);
 }
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t i;
 	char *ptr;
 
-	if (!*little)
-		return ((char*)big);
 	i = 0;
-	while (big[i] && i < len)
+	if (!haystack || !needle || !*needle)
+		return ((char *)haystack);
+	while (haystack[i] && i < len)
 	{
-		if (big[i] == little[0])
+		if (haystack[i] == needle[0])
 		{
-			if (little_is_found(big, little, len, i))
+			if (needle_is_found(haystack, needle, len, i))
 			{
-				ptr = (char *)&big[i];
+				ptr = (char *)&haystack[i];
 				return (ptr);
 			}
 		}
