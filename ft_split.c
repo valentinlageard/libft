@@ -12,7 +12,20 @@
 
 #include <stdlib.h>
 
-static int		count_words(const char *str, char sep)
+static void	free_words(int n_word, char **words)
+{
+	int i;
+
+	i = 0;
+	while (i < n_word)
+	{
+		free(words[i]);
+		i++;
+	}
+	free(words);
+}
+
+static int	count_words(const char *str, char sep)
 {
 	int i;
 	int word_count;
@@ -36,7 +49,7 @@ static int		count_words(const char *str, char sep)
 	return (word_count);
 }
 
-static int		new_word_pos(const char *str, int n_word, char sep)
+static int	new_word_pos(const char *str, int n_word, char sep)
 {
 	int i;
 	int word_count;
@@ -64,7 +77,7 @@ static int		new_word_pos(const char *str, int n_word, char sep)
 	return (i);
 }
 
-static char	*n_word(const char *str, int n_word, char sep)
+static char	*n_word(const char *str, int n_word, char sep, char **words)
 {
 	int		i;
 	int		j;
@@ -76,7 +89,10 @@ static char	*n_word(const char *str, int n_word, char sep)
 	while (str[k] && str[k] != sep)
 		k++;
 	if (!(word = (char *)malloc((k - i + 1) * sizeof(char))))
+	{
+		free_words(n_word, words);
 		return (0);
+	}
 	j = 0;
 	while (str[i] && str[i] != sep)
 	{
@@ -88,7 +104,7 @@ static char	*n_word(const char *str, int n_word, char sep)
 	return (word);
 }
 
-char	**ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
 	char	**words;
 	int		word_count;
@@ -101,7 +117,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	while (i < word_count)
 	{
-		words[i] = n_word(s, i, c);
+		words[i] = n_word(s, i, c, words);
 		i++;
 	}
 	return (words);

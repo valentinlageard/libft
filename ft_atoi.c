@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vlageard <vlageard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vlageard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/04 22:16:07 by vlageard          #+#    #+#             */
-/*   Updated: 2019/11/11 04:38:24 by vlageard         ###   ########.fr       */
+/*   Created: 2019/11/11 18:46:22 by vlageard          #+#    #+#             */
+/*   Updated: 2019/11/11 18:46:51 by vlageard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int	ft_is_space(char c)
 		return (0);
 }
 
-int	ft_atoi(const char *nptr)
+int			ft_atoi(const char *nptr)
 {
 	int i;
 	int sign_counter;

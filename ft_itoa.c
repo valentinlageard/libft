@@ -6,13 +6,13 @@
 /*   By: vlageard <vlageard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 01:40:55 by vlageard          #+#    #+#             */
-/*   Updated: 2019/11/11 04:38:41 by vlageard         ###   ########.fr       */
+/*   Updated: 2019/11/11 19:05:22 by vlageard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-static int		itoa_len(int n)
+static int	itoa_len(int n)
 {
 	int i;
 
@@ -27,7 +27,7 @@ static int		itoa_len(int n)
 	return (i);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	int		i;
 	int		len;
@@ -52,6 +52,6 @@ char	*ft_itoa(int n)
 	}
 	if (neg)
 		str[0] = '-';
-	str[len+neg] = 0;
+	str[len + neg] = 0;
 	return (str);
 }
