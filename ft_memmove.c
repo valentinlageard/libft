@@ -6,7 +6,7 @@
 /*   By: vlageard <vlageard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 22:56:52 by vlageard          #+#    #+#             */
-/*   Updated: 2019/11/08 19:56:36 by vlageard         ###   ########.fr       */
+/*   Updated: 2019/11/12 15:27:41 by vlageard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t			i;
+	size_t	i;
 
 	i = 0;
 	if (!dest && !src)

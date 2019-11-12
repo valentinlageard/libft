@@ -6,7 +6,7 @@
 /*   By: vlageard <vlageard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:13:22 by vlageard          #+#    #+#             */
-/*   Updated: 2019/11/11 04:34:15 by vlageard         ###   ########.fr       */
+/*   Updated: 2019/11/12 15:55:00 by vlageard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,14 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int		i;
-	char	*s_ptr;
+	size_t	i;
 
 	i = 0;
-	s_ptr = (char *)s;
-	while (s[i])
+	while (i <= ft_strlen(s))
 	{
-		if (s[i] == c)
-			return (s_ptr);
-		s_ptr++;
+		if (s[i] == (char)c)
+			return ((char *)&(s[i]));
 		i++;
 	}
-	if (!s[i] && c == 0)
-	{
-		return (s_ptr);
-	}
-	return (0);
+	return (NULL);
 }

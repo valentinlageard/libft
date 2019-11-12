@@ -6,7 +6,7 @@
 /*   By: vlageard <vlageard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:19:28 by vlageard          #+#    #+#             */
-/*   Updated: 2019/11/11 01:24:42 by vlageard         ###   ########.fr       */
+/*   Updated: 2019/11/12 15:48:18 by vlageard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (i <= ft_strlen(s))

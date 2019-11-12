@@ -6,7 +6,7 @@
 /*   By: vlageard <vlageard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 22:25:11 by vlageard          #+#    #+#             */
-/*   Updated: 2019/11/11 01:27:07 by vlageard         ###   ########.fr       */
+/*   Updated: 2019/11/12 15:53:03 by vlageard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	int		cmp;
 
 	i = 0;
-	while ((s1[i] != 0 || s2[i] != 0) && i < n)
+	while (s1[i] && s2[i] && i < n)
 	{
 		cmp = (unsigned char)s1[i] - (unsigned char)s2[i];
 		if (cmp == 0)

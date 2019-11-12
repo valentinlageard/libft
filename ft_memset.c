@@ -6,7 +6,7 @@
 /*   By: vlageard <vlageard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 15:48:01 by vlageard          #+#    #+#             */
-/*   Updated: 2019/11/11 01:22:42 by vlageard         ###   ########.fr       */
+/*   Updated: 2019/11/12 15:04:21 by vlageard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t			i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)

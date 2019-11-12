@@ -6,7 +6,7 @@
 /*   By: vlageard <vlageard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 18:46:22 by vlageard          #+#    #+#             */
-/*   Updated: 2019/11/11 22:25:32 by vlageard         ###   ########.fr       */
+/*   Updated: 2019/11/12 16:29:08 by vlageard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int			ft_atoi(const char *nptr)
 		result = result + nptr[i] - '0';
 		i++;
 	}
-	if (sign_counter % 2)
+	if (sign_counter)
 		result = -result;
 	return (result);
 }
