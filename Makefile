@@ -58,9 +58,6 @@ all:		$(NAME)
 $(NAME):	$(OBJS)
 			ar rcs $(NAME) $(OBJS)
 
-#$(OBJS) : $(SRC)
-#			$(CC) -c $(SRC)
-
 bonus:		$(OBJS) $(SRC_BONUS)
 			$(CC) -c $(SRC_BONUS)
 			ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
