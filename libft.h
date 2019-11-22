@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vlageard <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vlageard <vlageard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 21:08:46 by vlageard          #+#    #+#             */
-/*   Updated: 2019/11/11 21:08:50 by vlageard         ###   ########.fr       */
+/*   Updated: 2019/11/22 18:50:00 by vlageard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,7 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putstr_fd(char *s, int fd);
+int				ft_rand(void);
+unsigned int	ft_randr(unsigned int min, unsigned int max);
 
 #endif

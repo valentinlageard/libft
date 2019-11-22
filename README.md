@@ -2,4 +2,11 @@
 
 This is my libft for 42.
 
-While it is norminette and moulinette approved, DO NOT COPY IT ! You can however study it and compare it to your own code.
+## Additional functions
+
+- ft_rand(void) : generates a pseudo-random unsigned int between [1, 2^32[
+- ft_randr(min, max) : generates a pseudo-random unsigned int between [min,max[
+
+## Functions to add
+
+- realloc (stdlib) : change size of allocated memory.

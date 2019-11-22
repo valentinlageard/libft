@@ -17,6 +17,8 @@ SRC			=	ft_atoi.c \
 				ft_putendl_fd.c \
 				ft_putnbr_fd.c \
 				ft_putstr_fd.c \
+				ft_rand.c \
+				ft_randr.c \
 				ft_split.c \
 				ft_strchr.c \
 				ft_strdup.c \
@@ -32,8 +34,7 @@ SRC			=	ft_atoi.c \
 				ft_substr.c \
 				ft_tolower.c \
 				ft_toupper.c \
-
-SRC_BONUS	=	ft_lstadd_back.c \
+				ft_lstadd_back.c \
 				ft_lstadd_front.c \
 				ft_lstclear.c \
 				ft_lstdelone.c \
@@ -44,8 +45,6 @@ SRC_BONUS	=	ft_lstadd_back.c \
 				ft_lstmap.c
 
 OBJS		=	$(SRC:.c=.o)
-
-OBJS_BONUS	=	$(SRC_BONUS:.c=.o)
 
 CC			=	gcc $(FLAGS) -I.
 
@@ -58,12 +57,8 @@ all:		$(NAME)
 $(NAME):	$(OBJS)
 			ar rcs $(NAME) $(OBJS)
 
-bonus:		$(OBJS) $(SRC_BONUS)
-			$(CC) -c $(SRC_BONUS)
-			ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
-
 clean:
-			rm -f $(OBJS) $(OBJS_BONUS)
+			rm -f $(OBJS)
 
 fclean:		clean
 			rm -f $(NAME)
