@@ -42,7 +42,15 @@ SRC			=	ft_atoi.c \
 				ft_lstlast.c \
 				ft_lstnew.c \
 				ft_lstsize.c \
-				ft_lstmap.c
+				ft_lstmap.c \
+				ft_iscinstr.c \
+				ft_cdup.c \
+				ft_min.c \
+				ft_max.c \
+				ft_utoa.c \
+				ft_utoabase.c \
+				ft_ultoabase.c \
+				ft_abs.c
 
 OBJS		=	$(SRC:.c=.o)
 
