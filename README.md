@@ -17,4 +17,4 @@ This is my libft for 42.
 
 ## Functions to add
 
-- realloc (stdlib) : change size of allocated memory.
+- `realloc` : change size of allocated memory.
