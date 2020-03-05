@@ -50,7 +50,8 @@ SRC			=	ft_atoi.c \
 				ft_utoa.c \
 				ft_utoabase.c \
 				ft_ultoabase.c \
-				ft_abs.c
+				ft_abs.c \
+				ft_get_next_line.c
 
 OBJS		=	$(SRC:.c=.o)
 

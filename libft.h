@@ -6,7 +6,7 @@
 /*   By: vlageard <vlageard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 21:08:46 by vlageard          #+#    #+#             */
-/*   Updated: 2020/01/13 16:09:23 by vlageard         ###   ########.fr       */
+/*   Updated: 2020/03/05 19:04:27 by vlageard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 # define LIBFT_H
 
 # include <string.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 64
+# endif
+
 
 typedef struct	s_list
 {
@@ -37,6 +42,7 @@ char			*ft_utoa(unsigned int n);
 char			*ft_utoabase(unsigned int n, const char *base);
 int				ft_abs(int n);
 int				ft_atoi(const char *nptr);
+int				ft_get_next_line(int fd, char **line);
 int				ft_isalnum(int c);
 int				ft_isalpha(int c);
 int				ft_isascii(int c);
@@ -74,5 +80,6 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putstr_fd(char *s, int fd);
+
 
 #endif
